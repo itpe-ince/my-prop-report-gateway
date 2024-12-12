@@ -1,0 +1,10 @@
+{
+  "gatewayApp": {
+    "JobType": {
+      "null": "",
+      "RESERVE": "RESERVE",
+      "CRON": "CRON",
+      "NONE": "NONE"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "gatewayApp": {
+    "NotiType": {
+      "null": "",
+      "WEB": "WEB",
+      "APP": "APP",
+      "SMS": "SMS",
+      "EMAIL": "EMAIL"
+    }
+  }
+}

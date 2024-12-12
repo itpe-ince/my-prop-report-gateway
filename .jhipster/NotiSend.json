@@ -1,0 +1,60 @@
+{
+  "annotations": {
+    "changelogDate": "20241212042758"
+  },
+  "applications": ["gateway", "commonservice"],
+  "clientRootFolder": "commonservice",
+  "databaseType": "sql",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "notiName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "notiType",
+      "fieldType": "NotiType",
+      "fieldTypeDocumentation": "NotiType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "WEB,APP,SMS,EMAIL"
+    },
+    {
+      "fieldName": "notiTemplateId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "notiMsg",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "microserviceName": "commonservice",
+  "name": "NotiSend",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "notiTemplate",
+      "relationshipName": "notiTemplate",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

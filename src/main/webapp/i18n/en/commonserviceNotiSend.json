@@ -1,0 +1,34 @@
+{
+  "gatewayApp": {
+    "commonserviceNotiSend": {
+      "home": {
+        "title": "Noti Sends",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Noti Send",
+        "createOrEditLabel": "Create or edit a Noti Send",
+        "notFound": "No Noti Sends found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Noti Send {{ id }}?"
+      },
+      "detail": {
+        "title": "Noti Send"
+      },
+      "id": "Id",
+      "notiName": "Noti Name",
+      "notiType": "Noti Type",
+      "notiTemplateId": "Noti Template Id",
+      "notiMsg": "Noti Msg",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "notiTemplate": "Noti Template"
+    }
+  },
+  "commonserviceApp": {
+    "commonserviceNotiSend": {
+      "created": "A new Noti Send is created with identifier {{ param }}",
+      "updated": "A Noti Send is updated with identifier {{ param }}",
+      "deleted": "A Noti Send is deleted with identifier {{ param }}"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+org.springframework.test.context.ContextCustomizerFactory = com.dnc.mprs.\
+    gateway.config.SqlTestContainersSpringContextCustomizerFactory,com.dnc.mprs.\
+    gateway.config.TestContainersSpringContextCustomizerFactory,com.dnc.mprs.\
+    gateway.config.KafkaTestContainersSpringContextCustomizerFactory

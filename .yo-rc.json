@@ -1,0 +1,71 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 0,
+    "applicationType": "gateway",
+    "applications": {
+      "commonservice": {
+        "applicationIndex": 4,
+        "clientFramework": "react"
+      },
+      "propservice": {
+        "applicationIndex": 1,
+        "clientFramework": "react"
+      },
+      "reportservice": {
+        "applicationIndex": 3,
+        "clientFramework": "react"
+      },
+      "userservice": {
+        "applicationIndex": 2,
+        "clientFramework": "react"
+      }
+    },
+    "authenticationType": "oauth2",
+    "baseName": "gateway",
+    "buildTool": "gradle",
+    "cacheProvider": "redis",
+    "clientFramework": "react",
+    "clientTheme": "darkly",
+    "clientThemeVariant": "dark",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "devServerPort": 9060,
+    "enableHibernateCache": false,
+    "enableSwaggerCodegen": true,
+    "enableTranslation": true,
+    "entities": [
+      "Complex",
+      "Property",
+      "Transaction",
+      "UserInfo",
+      "Report",
+      "Infrastructure",
+      "EnvFactor",
+      "LivingRoom",
+      "Bedroom",
+      "Kitchen",
+      "Bathroom",
+      "Entrance",
+      "Author",
+      "AttachFile",
+      "NotiTemplate",
+      "NotiTplVariable",
+      "NotiSend",
+      "NotiSendTarget",
+      "NotiSendJob"
+    ],
+    "jhipsterVersion": "8.7.3",
+    "languages": ["ko", "en"],
+    "lastLiquibaseTimestamp": 1733977798000,
+    "messageBroker": "kafka",
+    "nativeLanguage": "ko",
+    "packageName": "com.dnc.mprs.gateway",
+    "prodDatabaseType": "mysql",
+    "reactive": true,
+    "searchEngine": "elasticsearch",
+    "serverPort": 8080,
+    "serviceDiscoveryType": "consul",
+    "skipUserManagement": true,
+    "testFrameworks": ["cucumber", "cypress"]
+  }
+}

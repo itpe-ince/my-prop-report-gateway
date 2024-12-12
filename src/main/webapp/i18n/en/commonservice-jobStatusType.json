@@ -1,0 +1,9 @@
+{
+  "gatewayApp": {
+    "JobStatusType": {
+      "null": "",
+      "ACTIVE": "ACTIVE",
+      "INACTIVE": "INACTIVE"
+    }
+  }
+}

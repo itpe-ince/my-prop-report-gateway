@@ -1,0 +1,49 @@
+{
+  "annotations": {
+    "changelogDate": "20241212042558"
+  },
+  "applications": ["gateway", "commonservice"],
+  "clientRootFolder": "commonservice",
+  "databaseType": "sql",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "templateTitle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "templateBody",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "1000"
+    },
+    {
+      "fieldName": "templateFormat",
+      "fieldType": "TemplateFormatType",
+      "fieldTypeDocumentation": "TemplateFormatType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "HTML,JSON,XML,MARKDOWN,TEXT"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "microserviceName": "commonservice",
+  "name": "NotiTemplate",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

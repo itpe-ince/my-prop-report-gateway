@@ -1,0 +1,37 @@
+{
+  "gatewayApp": {
+    "commonserviceNotiSendJob": {
+      "home": {
+        "title": "Noti Send Jobs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Noti Send Job",
+        "createOrEditLabel": "Create or edit a Noti Send Job",
+        "notFound": "No Noti Send Jobs found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Noti Send Job {{ id }}?"
+      },
+      "detail": {
+        "title": "Noti Send Job"
+      },
+      "id": "Id",
+      "notiId": "Noti Id",
+      "jobName": "Job Name",
+      "jobTime": "Job Time",
+      "jobType": "Job Type",
+      "jobStartAt": "Job Start At",
+      "jobEndAt": "Job End At",
+      "jobStatus": "Job Status",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "notiSend": "Noti Send"
+    }
+  },
+  "commonserviceApp": {
+    "commonserviceNotiSendJob": {
+      "created": "A new Noti Send Job is created with identifier {{ param }}",
+      "updated": "A Noti Send Job is updated with identifier {{ param }}",
+      "deleted": "A Noti Send Job is deleted with identifier {{ param }}"
+    }
+  }
+}

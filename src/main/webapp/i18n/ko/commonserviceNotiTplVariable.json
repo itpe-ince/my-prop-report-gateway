@@ -1,0 +1,34 @@
+{
+  "gatewayApp": {
+    "commonserviceNotiTplVariable": {
+      "home": {
+        "title": "Noti Tpl Variables",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Noti Tpl Variable",
+        "createOrEditLabel": "Create or edit a Noti Tpl Variable",
+        "notFound": "No Noti Tpl Variables found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Noti Tpl Variable {{ id }}?"
+      },
+      "detail": {
+        "title": "Noti Tpl Variable"
+      },
+      "id": "Id",
+      "notiTemplateId": "Noti Template Id",
+      "variableName": "Variable Name",
+      "defaultValue": "Default Value",
+      "desciption": "Desciption",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "notiTemplate": "Noti Template"
+    }
+  },
+  "commonserviceApp": {
+    "commonserviceNotiTplVariable": {
+      "created": "A new Noti Tpl Variable is created with identifier {{ param }}",
+      "updated": "A Noti Tpl Variable is updated with identifier {{ param }}",
+      "deleted": "A Noti Tpl Variable is deleted with identifier {{ param }}"
+    }
+  }
+}

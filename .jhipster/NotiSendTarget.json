@@ -1,0 +1,63 @@
+{
+  "annotations": {
+    "changelogDate": "20241212042858"
+  },
+  "applications": ["gateway", "commonservice"],
+  "clientRootFolder": "commonservice",
+  "databaseType": "sql",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "notiId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "targetUserNo",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "targetAddress",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "sendMsg",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "sendStatus",
+      "fieldType": "SendStatusType",
+      "fieldTypeDocumentation": "SendStatusType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "PENDING,SUCCESS,FAILED"
+    },
+    {
+      "fieldName": "sendAt",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "commonservice",
+  "name": "NotiSendTarget",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "notiSend",
+      "relationshipName": "notiSend",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

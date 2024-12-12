@@ -1,0 +1,12 @@
+{
+  "gatewayApp": {
+    "TemplateFormatType": {
+      "null": "",
+      "HTML": "HTML",
+      "JSON": "JSON",
+      "XML": "XML",
+      "MARKDOWN": "MARKDOWN",
+      "TEXT": "TEXT"
+    }
+  }
+}

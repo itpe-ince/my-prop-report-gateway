@@ -1,0 +1,38 @@
+{
+  "gatewayApp": {
+    "commonserviceAttachFile": {
+      "home": {
+        "title": "Attach Files",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Attach File",
+        "createOrEditLabel": "Create or edit a Attach File",
+        "notFound": "No Attach Files found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Attach File {{ id }}?"
+      },
+      "detail": {
+        "title": "Attach File"
+      },
+      "id": "Id",
+      "fileName": "File Name",
+      "fileOrgName": "File Org Name",
+      "filePath": "File Path",
+      "fileSize": "File Size",
+      "fileType": "File Type",
+      "linkUrl": "Link Url",
+      "source": "Source",
+      "relId": "Rel Id",
+      "relTitle": "Rel Title",
+      "relAttachSeq": "Rel Attach Seq",
+      "createdAt": "Created At"
+    }
+  },
+  "commonserviceApp": {
+    "commonserviceAttachFile": {
+      "created": "A new Attach File is created with identifier {{ param }}",
+      "updated": "A Attach File is updated with identifier {{ param }}",
+      "deleted": "A Attach File is deleted with identifier {{ param }}"
+    }
+  }
+}

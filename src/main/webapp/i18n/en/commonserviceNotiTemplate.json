@@ -1,0 +1,32 @@
+{
+  "gatewayApp": {
+    "commonserviceNotiTemplate": {
+      "home": {
+        "title": "Noti Templates",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Noti Template",
+        "createOrEditLabel": "Create or edit a Noti Template",
+        "notFound": "No Noti Templates found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Noti Template {{ id }}?"
+      },
+      "detail": {
+        "title": "Noti Template"
+      },
+      "id": "Id",
+      "templateTitle": "Template Title",
+      "templateBody": "Template Body",
+      "templateFormat": "Template Format",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At"
+    }
+  },
+  "commonserviceApp": {
+    "commonserviceNotiTemplate": {
+      "created": "A new Noti Template is created with identifier {{ param }}",
+      "updated": "A Noti Template is updated with identifier {{ param }}",
+      "deleted": "A Noti Template is deleted with identifier {{ param }}"
+    }
+  }
+}

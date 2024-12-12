@@ -1,0 +1,34 @@
+{
+  "gatewayApp": {
+    "commonserviceNotiSendTarget": {
+      "home": {
+        "title": "Noti Send Targets",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Noti Send Target",
+        "createOrEditLabel": "Create or edit a Noti Send Target",
+        "notFound": "No Noti Send Targets found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Noti Send Target {{ id }}?"
+      },
+      "detail": {
+        "title": "Noti Send Target"
+      },
+      "id": "Id",
+      "notiId": "Noti Id",
+      "targetUserNo": "Target User No",
+      "targetAddress": "Target Address",
+      "sendMsg": "Send Msg",
+      "sendStatus": "Send Status",
+      "sendAt": "Send At",
+      "notiSend": "Noti Send"
+    }
+  },
+  "commonserviceApp": {
+    "commonserviceNotiSendTarget": {
+      "created": "A new Noti Send Target is created with identifier {{ param }}",
+      "updated": "A Noti Send Target is updated with identifier {{ param }}",
+      "deleted": "A Noti Send Target is deleted with identifier {{ param }}"
+    }
+  }
+}

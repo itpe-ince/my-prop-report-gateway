@@ -1,0 +1,10 @@
+{
+  "gatewayApp": {
+    "SendStatusType": {
+      "null": "",
+      "PENDING": "PENDING",
+      "SUCCESS": "SUCCESS",
+      "FAILED": "FAILED"
+    }
+  }
+}
