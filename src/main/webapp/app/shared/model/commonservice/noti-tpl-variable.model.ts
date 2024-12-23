@@ -3,7 +3,6 @@ import { INotiTemplate } from 'app/shared/model/commonservice/noti-template.mode
 
 export interface INotiTplVariable {
   id?: number;
-  notiTemplateId?: number;
   variableName?: string;
   defaultValue?: number;
   desciption?: string;

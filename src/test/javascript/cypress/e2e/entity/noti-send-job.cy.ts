@@ -16,14 +16,13 @@ describe('NotiSendJob e2e test', () => {
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
   const notiSendJobSample = {
-    notiId: 1909,
-    jobName: 'even',
-    jobTime: 'a',
-    jobType: 'NONE',
-    jobStartAt: 'eek inasmuch barring',
-    jobEndAt: '활성화 상쾌한 likewise',
+    jobName: '비뚤어진 coop',
+    jobTime: '유연 astride',
+    jobType: 'RESERVE',
+    jobStartAt: '심하게 yet toward',
+    jobEndAt: 'till an drat',
     jobStatus: 'ACTIVE',
-    createdAt: '2024-12-11T19:13:53.038Z',
+    createdAt: '2024-12-22T15:24:50.526Z',
   };
 
   let notiSendJob;
@@ -171,32 +170,29 @@ describe('NotiSendJob e2e test', () => {
     });
 
     it('should create an instance of NotiSendJob', () => {
-      cy.get(`[data-cy="notiId"]`).type('19389');
-      cy.get(`[data-cy="notiId"]`).should('have.value', '19389');
+      cy.get(`[data-cy="jobName"]`).type('무더운 huzzah');
+      cy.get(`[data-cy="jobName"]`).should('have.value', '무더운 huzzah');
 
-      cy.get(`[data-cy="jobName"]`).type('우연히');
-      cy.get(`[data-cy="jobName"]`).should('have.value', '우연히');
+      cy.get(`[data-cy="jobTime"]`).type('분석 below');
+      cy.get(`[data-cy="jobTime"]`).should('have.value', '분석 below');
 
-      cy.get(`[data-cy="jobTime"]`).type('아드레날린 large ugh');
-      cy.get(`[data-cy="jobTime"]`).should('have.value', '아드레날린 large ugh');
+      cy.get(`[data-cy="jobType"]`).select('CRON');
 
-      cy.get(`[data-cy="jobType"]`).select('NONE');
+      cy.get(`[data-cy="jobStartAt"]`).type('so blah wherever');
+      cy.get(`[data-cy="jobStartAt"]`).should('have.value', 'so blah wherever');
 
-      cy.get(`[data-cy="jobStartAt"]`).type('대수학 밝게 양');
-      cy.get(`[data-cy="jobStartAt"]`).should('have.value', '대수학 밝게 양');
-
-      cy.get(`[data-cy="jobEndAt"]`).type('fooey er where');
-      cy.get(`[data-cy="jobEndAt"]`).should('have.value', 'fooey er where');
+      cy.get(`[data-cy="jobEndAt"]`).type('yowza ugh');
+      cy.get(`[data-cy="jobEndAt"]`).should('have.value', 'yowza ugh');
 
       cy.get(`[data-cy="jobStatus"]`).select('INACTIVE');
 
-      cy.get(`[data-cy="createdAt"]`).type('2024-12-12T03:47');
+      cy.get(`[data-cy="createdAt"]`).type('2024-12-22T11:55');
       cy.get(`[data-cy="createdAt"]`).blur();
-      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-12T03:47');
+      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-22T11:55');
 
-      cy.get(`[data-cy="updatedAt"]`).type('2024-12-11T15:05');
+      cy.get(`[data-cy="updatedAt"]`).type('2024-12-23T02:30');
       cy.get(`[data-cy="updatedAt"]`).blur();
-      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-11T15:05');
+      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-23T02:30');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

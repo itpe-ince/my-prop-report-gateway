@@ -19,8 +19,8 @@ describe('Transaction e2e test', () => {
     propertyId: 24687,
     transactionType: 'since',
     price: 9754.51,
-    transactionDate: '2024-12-12T00:42:37.178Z',
-    createdAt: '2024-12-11T07:56:23.072Z',
+    transactionDate: '2024-12-23T07:03:59.178Z',
+    createdAt: '2024-12-22T14:17:45.072Z',
   };
 
   let transaction;
@@ -177,9 +177,9 @@ describe('Transaction e2e test', () => {
       cy.get(`[data-cy="price"]`).type('1695.4');
       cy.get(`[data-cy="price"]`).should('have.value', '1695.4');
 
-      cy.get(`[data-cy="transactionDate"]`).type('2024-12-11T22:50');
+      cy.get(`[data-cy="transactionDate"]`).type('2024-12-23T05:11');
       cy.get(`[data-cy="transactionDate"]`).blur();
-      cy.get(`[data-cy="transactionDate"]`).should('have.value', '2024-12-11T22:50');
+      cy.get(`[data-cy="transactionDate"]`).should('have.value', '2024-12-23T05:11');
 
       cy.get(`[data-cy="buyer"]`).type('진지한 up');
       cy.get(`[data-cy="buyer"]`).should('have.value', '진지한 up');
@@ -190,13 +190,13 @@ describe('Transaction e2e test', () => {
       cy.get(`[data-cy="agent"]`).type('예술적인');
       cy.get(`[data-cy="agent"]`).should('have.value', '예술적인');
 
-      cy.get(`[data-cy="createdAt"]`).type('2024-12-12T00:16');
+      cy.get(`[data-cy="createdAt"]`).type('2024-12-23T06:38');
       cy.get(`[data-cy="createdAt"]`).blur();
-      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-12T00:16');
+      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-23T06:38');
 
-      cy.get(`[data-cy="updatedAt"]`).type('2024-12-11T04:50');
+      cy.get(`[data-cy="updatedAt"]`).type('2024-12-22T11:12');
       cy.get(`[data-cy="updatedAt"]`).blur();
-      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-11T04:50');
+      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-22T11:12');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

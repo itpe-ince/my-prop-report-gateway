@@ -16,12 +16,11 @@ describe('NotiSendTarget e2e test', () => {
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
   const notiSendTargetSample = {
-    notiId: 23154,
-    targetUserNo: 28623,
-    targetAddress: 'yowza 명랑하게 거만하게',
-    sendMsg: 'alongside 에일 저주받은',
-    sendStatus: 'SUCCESS',
-    sendAt: '2024-12-11T20:16:16.569Z',
+    targetUserNo: 18593,
+    targetAddress: '부사',
+    sendMsg: '대체로 미친 um',
+    sendStatus: 'PENDING',
+    sendAt: '2024-12-22T22:16:59.006Z',
   };
 
   let notiSendTarget;
@@ -169,23 +168,20 @@ describe('NotiSendTarget e2e test', () => {
     });
 
     it('should create an instance of NotiSendTarget', () => {
-      cy.get(`[data-cy="notiId"]`).type('7891');
-      cy.get(`[data-cy="notiId"]`).should('have.value', '7891');
+      cy.get(`[data-cy="targetUserNo"]`).type('7891');
+      cy.get(`[data-cy="targetUserNo"]`).should('have.value', '7891');
 
-      cy.get(`[data-cy="targetUserNo"]`).type('28861');
-      cy.get(`[data-cy="targetUserNo"]`).should('have.value', '28861');
+      cy.get(`[data-cy="targetAddress"]`).type('아마존 like whoa');
+      cy.get(`[data-cy="targetAddress"]`).should('have.value', '아마존 like whoa');
 
-      cy.get(`[data-cy="targetAddress"]`).type('horn');
-      cy.get(`[data-cy="targetAddress"]`).should('have.value', 'horn');
+      cy.get(`[data-cy="sendMsg"]`).type('음침한 on 공적');
+      cy.get(`[data-cy="sendMsg"]`).should('have.value', '음침한 on 공적');
 
-      cy.get(`[data-cy="sendMsg"]`).type('버려진 오후');
-      cy.get(`[data-cy="sendMsg"]`).should('have.value', '버려진 오후');
+      cy.get(`[data-cy="sendStatus"]`).select('FAILED');
 
-      cy.get(`[data-cy="sendStatus"]`).select('PENDING');
-
-      cy.get(`[data-cy="sendAt"]`).type('2024-12-12T01:51');
+      cy.get(`[data-cy="sendAt"]`).type('2024-12-23T05:44');
       cy.get(`[data-cy="sendAt"]`).blur();
-      cy.get(`[data-cy="sendAt"]`).should('have.value', '2024-12-12T01:51');
+      cy.get(`[data-cy="sendAt"]`).should('have.value', '2024-12-23T05:44');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

@@ -15,7 +15,7 @@ describe('Entrance e2e test', () => {
   const entrancePageUrlPattern = new RegExp('/entrance(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const entranceSample = { reportId: 831, entranceName: '행복한 pace 충실한', condtionLevel: 'LOW' };
+  const entranceSample = { entranceName: 'satirise duh', condtionLevel: 'LOW' };
 
   let entrance;
 
@@ -162,25 +162,22 @@ describe('Entrance e2e test', () => {
     });
 
     it('should create an instance of Entrance', () => {
-      cy.get(`[data-cy="reportId"]`).type('28474');
-      cy.get(`[data-cy="reportId"]`).should('have.value', '28474');
+      cy.get(`[data-cy="entranceName"]`).type('호박색 차가운 아름답게');
+      cy.get(`[data-cy="entranceName"]`).should('have.value', '호박색 차가운 아름답게');
 
-      cy.get(`[data-cy="entranceName"]`).type('swill');
-      cy.get(`[data-cy="entranceName"]`).should('have.value', 'swill');
+      cy.get(`[data-cy="condtionLevel"]`).select('MIDDLE');
 
-      cy.get(`[data-cy="condtionLevel"]`).select('LOW');
+      cy.get(`[data-cy="entranceSize"]`).type('2287.11');
+      cy.get(`[data-cy="entranceSize"]`).should('have.value', '2287.11');
 
-      cy.get(`[data-cy="entranceSize"]`).type('7393.44');
-      cy.get(`[data-cy="entranceSize"]`).should('have.value', '7393.44');
+      cy.get(`[data-cy="shoeRackSize"]`).type('6048.71');
+      cy.get(`[data-cy="shoeRackSize"]`).should('have.value', '6048.71');
 
-      cy.get(`[data-cy="shoeRackSize"]`).type('10103.52');
-      cy.get(`[data-cy="shoeRackSize"]`).should('have.value', '10103.52');
+      cy.get(`[data-cy="pantryPresence"]`).type('a');
+      cy.get(`[data-cy="pantryPresence"]`).should('have.value', 'a');
 
-      cy.get(`[data-cy="pantryPresence"]`).type('c');
-      cy.get(`[data-cy="pantryPresence"]`).should('have.value', 'c');
-
-      cy.get(`[data-cy="remarks"]`).type('yahoo 예의 바른');
-      cy.get(`[data-cy="remarks"]`).should('have.value', 'yahoo 예의 바른');
+      cy.get(`[data-cy="remarks"]`).type('의식하는');
+      cy.get(`[data-cy="remarks"]`).should('have.value', '의식하는');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

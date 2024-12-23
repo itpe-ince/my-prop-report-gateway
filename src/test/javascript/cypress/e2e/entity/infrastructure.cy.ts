@@ -15,7 +15,7 @@ describe('Infrastructure e2e test', () => {
   const infrastructurePageUrlPattern = new RegExp('/infrastructure(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const infrastructureSample = { reportId: 31914, infraType: 'TRANSPRT', infraName: 'or', conditionLevel: 'HIGH' };
+  const infrastructureSample = { infraType: 'TRANSPRT', infraName: '적응 meanwhile', conditionLevel: 'LOW' };
 
   let infrastructure;
 
@@ -162,23 +162,20 @@ describe('Infrastructure e2e test', () => {
     });
 
     it('should create an instance of Infrastructure', () => {
-      cy.get(`[data-cy="reportId"]`).type('31404');
-      cy.get(`[data-cy="reportId"]`).should('have.value', '31404');
+      cy.get(`[data-cy="infraType"]`).select('HOSPITAL');
 
-      cy.get(`[data-cy="infraType"]`).select('CONVENIENCE');
+      cy.get(`[data-cy="infraName"]`).type('beneath round');
+      cy.get(`[data-cy="infraName"]`).should('have.value', 'beneath round');
 
-      cy.get(`[data-cy="infraName"]`).type('barring 조언');
-      cy.get(`[data-cy="infraName"]`).should('have.value', 'barring 조언');
+      cy.get(`[data-cy="conditionLevel"]`).select('LOW');
 
-      cy.get(`[data-cy="conditionLevel"]`).select('MIDDLE');
+      cy.get(`[data-cy="infraDistance"]`).type('18526');
+      cy.get(`[data-cy="infraDistance"]`).should('have.value', '18526');
 
-      cy.get(`[data-cy="infraDistance"]`).type('11853');
-      cy.get(`[data-cy="infraDistance"]`).should('have.value', '11853');
+      cy.get(`[data-cy="infraDistanceUnit"]`).select('MIDDLE');
 
-      cy.get(`[data-cy="infraDistanceUnit"]`).select('LOW');
-
-      cy.get(`[data-cy="remarks"]`).type('똑똑하게 now');
-      cy.get(`[data-cy="remarks"]`).should('have.value', '똑똑하게 now');
+      cy.get(`[data-cy="remarks"]`).type('bore 잔인하게 비행선');
+      cy.get(`[data-cy="remarks"]`).should('have.value', 'bore 잔인하게 비행선');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

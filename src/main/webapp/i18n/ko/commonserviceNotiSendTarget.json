@@ -15,7 +15,6 @@
         "title": "Noti Send Target"
       },
       "id": "Id",
-      "notiId": "Noti Id",
       "targetUserNo": "Target User No",
       "targetAddress": "Target Address",
       "sendMsg": "Send Msg",

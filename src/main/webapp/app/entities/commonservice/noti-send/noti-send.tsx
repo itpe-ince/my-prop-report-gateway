@@ -122,10 +122,6 @@ export const NotiSend = () => {
                   <Translate contentKey="gatewayApp.commonserviceNotiSend.notiType">Noti Type</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('notiType')} />
                 </th>
-                <th className="hand" onClick={sort('notiTemplateId')}>
-                  <Translate contentKey="gatewayApp.commonserviceNotiSend.notiTemplateId">Noti Template Id</Translate>{' '}
-                  <FontAwesomeIcon icon={getSortIconByFieldName('notiTemplateId')} />
-                </th>
                 <th className="hand" onClick={sort('notiMsg')}>
                   <Translate contentKey="gatewayApp.commonserviceNotiSend.notiMsg">Noti Msg</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('notiMsg')} />
@@ -157,7 +153,6 @@ export const NotiSend = () => {
                   <td>
                     <Translate contentKey={`gatewayApp.NotiType.${notiSend.notiType}`} />
                   </td>
-                  <td>{notiSend.notiTemplateId}</td>
                   <td>{notiSend.notiMsg}</td>
                   <td>{notiSend.createdAt ? <TextFormat type="date" value={notiSend.createdAt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{notiSend.updatedAt ? <TextFormat type="date" value={notiSend.updatedAt} format={APP_DATE_FORMAT} /> : null}</td>

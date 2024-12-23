@@ -33,12 +33,6 @@ export const NotiSendTargetDetail = () => {
           </dt>
           <dd>{notiSendTargetEntity.id}</dd>
           <dt>
-            <span id="notiId">
-              <Translate contentKey="gatewayApp.commonserviceNotiSendTarget.notiId">Noti Id</Translate>
-            </span>
-          </dt>
-          <dd>{notiSendTargetEntity.notiId}</dd>
-          <dt>
             <span id="targetUserNo">
               <Translate contentKey="gatewayApp.commonserviceNotiSendTarget.targetUserNo">Target User No</Translate>
             </span>

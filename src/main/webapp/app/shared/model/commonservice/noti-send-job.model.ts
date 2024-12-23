@@ -5,7 +5,6 @@ import { JobStatusType } from 'app/shared/model/enumerations/job-status-type.mod
 
 export interface INotiSendJob {
   id?: number;
-  notiId?: number;
   jobName?: string;
   jobTime?: string;
   jobType?: keyof typeof JobType;

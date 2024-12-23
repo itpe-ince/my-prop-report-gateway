@@ -114,10 +114,6 @@ export const NotiSendJob = () => {
                   <Translate contentKey="gatewayApp.commonserviceNotiSendJob.id">Id</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('id')} />
                 </th>
-                <th className="hand" onClick={sort('notiId')}>
-                  <Translate contentKey="gatewayApp.commonserviceNotiSendJob.notiId">Noti Id</Translate>{' '}
-                  <FontAwesomeIcon icon={getSortIconByFieldName('notiId')} />
-                </th>
                 <th className="hand" onClick={sort('jobName')}>
                   <Translate contentKey="gatewayApp.commonserviceNotiSendJob.jobName">Job Name</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('jobName')} />
@@ -164,7 +160,6 @@ export const NotiSendJob = () => {
                       {notiSendJob.id}
                     </Button>
                   </td>
-                  <td>{notiSendJob.notiId}</td>
                   <td>{notiSendJob.jobName}</td>
                   <td>{notiSendJob.jobTime}</td>
                   <td>

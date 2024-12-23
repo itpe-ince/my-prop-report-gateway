@@ -16,14 +16,13 @@ describe('Property e2e test', () => {
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
   const propertySample = {
-    complexId: 9030,
-    address: 'underneath 의심스럽게 달력',
-    type: '맹목적으로 행복하게 likewise',
-    area: 13688.5,
-    rooms: 1175,
-    bathrooms: 12650,
-    buildYear: 21309,
-    createdAt: '2024-12-11T12:43:29.750Z',
+    address: '나쁜 or',
+    type: 'pfft 형용사',
+    area: 14578.11,
+    rooms: 30849,
+    bathrooms: 14082,
+    buildYear: 7964,
+    createdAt: '2024-12-23T04:11:43.515Z',
   };
 
   let property;
@@ -171,52 +170,49 @@ describe('Property e2e test', () => {
     });
 
     it('should create an instance of Property', () => {
-      cy.get(`[data-cy="complexId"]`).type('6217');
-      cy.get(`[data-cy="complexId"]`).should('have.value', '6217');
+      cy.get(`[data-cy="address"]`).type('대담하게');
+      cy.get(`[data-cy="address"]`).should('have.value', '대담하게');
 
-      cy.get(`[data-cy="address"]`).type('dicker');
-      cy.get(`[data-cy="address"]`).should('have.value', 'dicker');
+      cy.get(`[data-cy="regionCd"]`).type('ack');
+      cy.get(`[data-cy="regionCd"]`).should('have.value', 'ack');
 
-      cy.get(`[data-cy="regionCd"]`).type('gosh');
-      cy.get(`[data-cy="regionCd"]`).should('have.value', 'gosh');
+      cy.get(`[data-cy="localName"]`).type('출현 비행선 몹시');
+      cy.get(`[data-cy="localName"]`).should('have.value', '출현 비행선 몹시');
 
-      cy.get(`[data-cy="localName"]`).type('이점 hmph');
-      cy.get(`[data-cy="localName"]`).should('have.value', '이점 hmph');
+      cy.get(`[data-cy="street"]`).type('광명면');
+      cy.get(`[data-cy="street"]`).should('have.value', '광명면');
 
-      cy.get(`[data-cy="street"]`).type('검단동');
-      cy.get(`[data-cy="street"]`).should('have.value', '검단동');
+      cy.get(`[data-cy="floor"]`).type('25603');
+      cy.get(`[data-cy="floor"]`).should('have.value', '25603');
 
-      cy.get(`[data-cy="floor"]`).type('16965');
-      cy.get(`[data-cy="floor"]`).should('have.value', '16965');
+      cy.get(`[data-cy="type"]`).type('몹시');
+      cy.get(`[data-cy="type"]`).should('have.value', '몹시');
 
-      cy.get(`[data-cy="type"]`).type('고의로');
-      cy.get(`[data-cy="type"]`).should('have.value', '고의로');
+      cy.get(`[data-cy="area"]`).type('18336.87');
+      cy.get(`[data-cy="area"]`).should('have.value', '18336.87');
 
-      cy.get(`[data-cy="area"]`).type('19942.98');
-      cy.get(`[data-cy="area"]`).should('have.value', '19942.98');
+      cy.get(`[data-cy="rooms"]`).type('30751');
+      cy.get(`[data-cy="rooms"]`).should('have.value', '30751');
 
-      cy.get(`[data-cy="rooms"]`).type('24484');
-      cy.get(`[data-cy="rooms"]`).should('have.value', '24484');
+      cy.get(`[data-cy="bathrooms"]`).type('14178');
+      cy.get(`[data-cy="bathrooms"]`).should('have.value', '14178');
 
-      cy.get(`[data-cy="bathrooms"]`).type('29364');
-      cy.get(`[data-cy="bathrooms"]`).should('have.value', '29364');
+      cy.get(`[data-cy="buildYear"]`).type('12564');
+      cy.get(`[data-cy="buildYear"]`).should('have.value', '12564');
 
-      cy.get(`[data-cy="buildYear"]`).type('9128');
-      cy.get(`[data-cy="buildYear"]`).should('have.value', '9128');
+      cy.get(`[data-cy="parkingYn"]`).type('활');
+      cy.get(`[data-cy="parkingYn"]`).should('have.value', '활');
 
-      cy.get(`[data-cy="parkingYn"]`).type('감');
-      cy.get(`[data-cy="parkingYn"]`).should('have.value', '감');
+      cy.get(`[data-cy="description"]`).type('oh');
+      cy.get(`[data-cy="description"]`).should('have.value', 'oh');
 
-      cy.get(`[data-cy="description"]`).type('전진 깊이');
-      cy.get(`[data-cy="description"]`).should('have.value', '전진 깊이');
-
-      cy.get(`[data-cy="createdAt"]`).type('2024-12-12T03:05');
+      cy.get(`[data-cy="createdAt"]`).type('2024-12-23T00:36');
       cy.get(`[data-cy="createdAt"]`).blur();
-      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-12T03:05');
+      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-23T00:36');
 
-      cy.get(`[data-cy="updatedAt"]`).type('2024-12-11T14:07');
+      cy.get(`[data-cy="updatedAt"]`).type('2024-12-23T03:08');
       cy.get(`[data-cy="updatedAt"]`).blur();
-      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-11T14:07');
+      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-23T03:08');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

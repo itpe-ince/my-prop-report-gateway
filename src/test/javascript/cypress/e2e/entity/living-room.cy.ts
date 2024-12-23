@@ -15,7 +15,7 @@ describe('LivingRoom e2e test', () => {
   const livingRoomPageUrlPattern = new RegExp('/living-room(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const livingRoomSample = { reportId: 6442, livingRoomName: '의심스럽게 until', conditionLevel: 'HIGH', wallState: 'MIDDLE' };
+  const livingRoomSample = { livingRoomName: 'how', conditionLevel: 'HIGH', wallState: 'MIDDLE' };
 
   let livingRoom;
 
@@ -162,27 +162,24 @@ describe('LivingRoom e2e test', () => {
     });
 
     it('should create an instance of LivingRoom', () => {
-      cy.get(`[data-cy="reportId"]`).type('911');
-      cy.get(`[data-cy="reportId"]`).should('have.value', '911');
+      cy.get(`[data-cy="livingRoomName"]`).type('confiscate');
+      cy.get(`[data-cy="livingRoomName"]`).should('have.value', 'confiscate');
 
-      cy.get(`[data-cy="livingRoomName"]`).type('성취');
-      cy.get(`[data-cy="livingRoomName"]`).should('have.value', '성취');
+      cy.get(`[data-cy="conditionLevel"]`).select('MIDDLE');
 
-      cy.get(`[data-cy="conditionLevel"]`).select('LOW');
+      cy.get(`[data-cy="roomSize"]`).type('27370.38');
+      cy.get(`[data-cy="roomSize"]`).should('have.value', '27370.38');
 
-      cy.get(`[data-cy="roomSize"]`).type('16304.85');
-      cy.get(`[data-cy="roomSize"]`).should('have.value', '16304.85');
+      cy.get(`[data-cy="wallState"]`).select('MIDDLE');
 
-      cy.get(`[data-cy="wallState"]`).select('HIGH');
+      cy.get(`[data-cy="floorMaterial"]`).type('spectate');
+      cy.get(`[data-cy="floorMaterial"]`).should('have.value', 'spectate');
 
-      cy.get(`[data-cy="floorMaterial"]`).type('aw 진지한');
-      cy.get(`[data-cy="floorMaterial"]`).should('have.value', 'aw 진지한');
+      cy.get(`[data-cy="sunlight"]`).type('진지한 pish');
+      cy.get(`[data-cy="sunlight"]`).should('have.value', '진지한 pish');
 
-      cy.get(`[data-cy="sunlight"]`).type('유연 즐거운');
-      cy.get(`[data-cy="sunlight"]`).should('have.value', '유연 즐거운');
-
-      cy.get(`[data-cy="remarks"]`).type('배당 골목 how');
-      cy.get(`[data-cy="remarks"]`).should('have.value', '배당 골목 how');
+      cy.get(`[data-cy="remarks"]`).type('즐거운 blah zowie');
+      cy.get(`[data-cy="remarks"]`).should('have.value', '즐거운 blah zowie');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

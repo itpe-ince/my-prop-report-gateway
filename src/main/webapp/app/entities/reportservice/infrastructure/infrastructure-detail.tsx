@@ -32,12 +32,6 @@ export const InfrastructureDetail = () => {
           </dt>
           <dd>{infrastructureEntity.id}</dd>
           <dt>
-            <span id="reportId">
-              <Translate contentKey="gatewayApp.reportserviceInfrastructure.reportId">Report Id</Translate>
-            </span>
-          </dt>
-          <dd>{infrastructureEntity.reportId}</dd>
-          <dt>
             <span id="infraType">
               <Translate contentKey="gatewayApp.reportserviceInfrastructure.infraType">Infra Type</Translate>
             </span>

@@ -15,7 +15,7 @@ describe('Kitchen e2e test', () => {
   const kitchenPageUrlPattern = new RegExp('/kitchen(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const kitchenSample = { reportId: 23031, kitchenName: 'whose', conditionLevel: 'LOW', sinkCondition: 'LOW' };
+  const kitchenSample = { kitchenName: 'gee 거꾸로', conditionLevel: 'LOW', sinkCondition: 'HIGH' };
 
   let kitchen;
 
@@ -162,27 +162,24 @@ describe('Kitchen e2e test', () => {
     });
 
     it('should create an instance of Kitchen', () => {
-      cy.get(`[data-cy="reportId"]`).type('10596');
-      cy.get(`[data-cy="reportId"]`).should('have.value', '10596');
+      cy.get(`[data-cy="kitchenName"]`).type('uh-huh');
+      cy.get(`[data-cy="kitchenName"]`).should('have.value', 'uh-huh');
 
-      cy.get(`[data-cy="kitchenName"]`).type('정확한 modulo');
-      cy.get(`[data-cy="kitchenName"]`).should('have.value', '정확한 modulo');
+      cy.get(`[data-cy="conditionLevel"]`).select('LOW');
 
-      cy.get(`[data-cy="conditionLevel"]`).select('MIDDLE');
+      cy.get(`[data-cy="builtInCabinet"]`).type('에');
+      cy.get(`[data-cy="builtInCabinet"]`).should('have.value', '에');
 
-      cy.get(`[data-cy="builtInCabinet"]`).type('고');
-      cy.get(`[data-cy="builtInCabinet"]`).should('have.value', '고');
+      cy.get(`[data-cy="sinkCondition"]`).select('MIDDLE');
 
-      cy.get(`[data-cy="sinkCondition"]`).select('LOW');
+      cy.get(`[data-cy="ventilationSystem"]`).type('거의');
+      cy.get(`[data-cy="ventilationSystem"]`).should('have.value', '거의');
 
-      cy.get(`[data-cy="ventilationSystem"]`).type('극적인');
-      cy.get(`[data-cy="ventilationSystem"]`).should('have.value', '극적인');
+      cy.get(`[data-cy="applianceProvision"]`).type('below 극적인');
+      cy.get(`[data-cy="applianceProvision"]`).should('have.value', 'below 극적인');
 
-      cy.get(`[data-cy="applianceProvision"]`).type('meh');
-      cy.get(`[data-cy="applianceProvision"]`).should('have.value', 'meh');
-
-      cy.get(`[data-cy="remarks"]`).type('gee 거꾸로');
-      cy.get(`[data-cy="remarks"]`).should('have.value', 'gee 거꾸로');
+      cy.get(`[data-cy="remarks"]`).type('meh');
+      cy.get(`[data-cy="remarks"]`).should('have.value', 'meh');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

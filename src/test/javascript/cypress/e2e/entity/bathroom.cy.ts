@@ -15,13 +15,7 @@ describe('Bathroom e2e test', () => {
   const bathroomPageUrlPattern = new RegExp('/bathroom(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const bathroomSample = {
-    reportId: 27348,
-    bathroomName: 'whenever whose',
-    condtionLevel: 'HIGH',
-    waterPressure: 'HIGH',
-    floorAndCeiling: 'HIGH',
-  };
+  const bathroomSample = { bathroomName: 'absent after', condtionLevel: 'LOW', waterPressure: 'LOW', floorAndCeiling: 'HIGH' };
 
   let bathroom;
 
@@ -168,29 +162,26 @@ describe('Bathroom e2e test', () => {
     });
 
     it('should create an instance of Bathroom', () => {
-      cy.get(`[data-cy="reportId"]`).type('19902');
-      cy.get(`[data-cy="reportId"]`).should('have.value', '19902');
+      cy.get(`[data-cy="bathroomName"]`).type('huzzah 흥미롭게');
+      cy.get(`[data-cy="bathroomName"]`).should('have.value', 'huzzah 흥미롭게');
 
-      cy.get(`[data-cy="bathroomName"]`).type('pish');
-      cy.get(`[data-cy="bathroomName"]`).should('have.value', 'pish');
+      cy.get(`[data-cy="condtionLevel"]`).select('MIDDLE');
 
-      cy.get(`[data-cy="condtionLevel"]`).select('HIGH');
+      cy.get(`[data-cy="bathroomSize"]`).type('5224.43');
+      cy.get(`[data-cy="bathroomSize"]`).should('have.value', '5224.43');
 
-      cy.get(`[data-cy="bathroomSize"]`).type('32451.94');
-      cy.get(`[data-cy="bathroomSize"]`).should('have.value', '32451.94');
+      cy.get(`[data-cy="waterPressure"]`).select('HIGH');
 
-      cy.get(`[data-cy="waterPressure"]`).select('LOW');
+      cy.get(`[data-cy="showerBoothPresence"]`).type('전');
+      cy.get(`[data-cy="showerBoothPresence"]`).should('have.value', '전');
 
-      cy.get(`[data-cy="showerBoothPresence"]`).type('불');
-      cy.get(`[data-cy="showerBoothPresence"]`).should('have.value', '불');
+      cy.get(`[data-cy="bathtubPresence"]`).type('동');
+      cy.get(`[data-cy="bathtubPresence"]`).should('have.value', '동');
 
-      cy.get(`[data-cy="bathtubPresence"]`).type('활');
-      cy.get(`[data-cy="bathtubPresence"]`).should('have.value', '활');
+      cy.get(`[data-cy="floorAndCeiling"]`).select('LOW');
 
-      cy.get(`[data-cy="floorAndCeiling"]`).select('MIDDLE');
-
-      cy.get(`[data-cy="remarks"]`).type('plus');
-      cy.get(`[data-cy="remarks"]`).should('have.value', 'plus');
+      cy.get(`[data-cy="remarks"]`).type('알파카 거만하게');
+      cy.get(`[data-cy="remarks"]`).should('have.value', '알파카 거만하게');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

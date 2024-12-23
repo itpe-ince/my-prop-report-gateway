@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Button, Col, Row } from 'reactstrap';
-import { Translate, ValidatedField, ValidatedForm, isNumber, translate } from 'react-jhipster';
+import { Translate, ValidatedField, ValidatedForm, translate } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
@@ -51,9 +51,6 @@ export const NotiSendJobUpdate = () => {
   const saveEntity = values => {
     if (values.id !== undefined && typeof values.id !== 'number') {
       values.id = Number(values.id);
-    }
-    if (values.notiId !== undefined && typeof values.notiId !== 'number') {
-      values.notiId = Number(values.notiId);
     }
     values.createdAt = convertDateTimeToServer(values.createdAt);
     values.updatedAt = convertDateTimeToServer(values.updatedAt);
@@ -111,17 +108,6 @@ export const NotiSendJobUpdate = () => {
                   validate={{ required: true }}
                 />
               ) : null}
-              <ValidatedField
-                label={translate('gatewayApp.commonserviceNotiSendJob.notiId')}
-                id="noti-send-job-notiId"
-                name="notiId"
-                data-cy="notiId"
-                type="text"
-                validate={{
-                  required: { value: true, message: translate('entity.validation.required') },
-                  validate: v => isNumber(v) || translate('entity.validation.number'),
-                }}
-              />
               <ValidatedField
                 label={translate('gatewayApp.commonserviceNotiSendJob.jobName')}
                 id="noti-send-job-jobName"

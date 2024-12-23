@@ -48,9 +48,6 @@ export const NotiTplVariableUpdate = () => {
     if (values.id !== undefined && typeof values.id !== 'number') {
       values.id = Number(values.id);
     }
-    if (values.notiTemplateId !== undefined && typeof values.notiTemplateId !== 'number') {
-      values.notiTemplateId = Number(values.notiTemplateId);
-    }
     if (values.defaultValue !== undefined && typeof values.defaultValue !== 'number') {
       values.defaultValue = Number(values.defaultValue);
     }
@@ -110,17 +107,6 @@ export const NotiTplVariableUpdate = () => {
                   validate={{ required: true }}
                 />
               ) : null}
-              <ValidatedField
-                label={translate('gatewayApp.commonserviceNotiTplVariable.notiTemplateId')}
-                id="noti-tpl-variable-notiTemplateId"
-                name="notiTemplateId"
-                data-cy="notiTemplateId"
-                type="text"
-                validate={{
-                  required: { value: true, message: translate('entity.validation.required') },
-                  validate: v => isNumber(v) || translate('entity.validation.number'),
-                }}
-              />
               <ValidatedField
                 label={translate('gatewayApp.commonserviceNotiTplVariable.variableName')}
                 id="noti-tpl-variable-variableName"

@@ -15,7 +15,7 @@ describe('Complex e2e test', () => {
   const complexPageUrlPattern = new RegExp('/complex(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const complexSample = { complexName: '단호한 멍든 ah', createdAt: '2024-12-11T12:46:33.142Z' };
+  const complexSample = { complexName: '단호한 멍든 ah', createdAt: '2024-12-22T19:07:55.142Z' };
 
   let complex;
 
@@ -180,13 +180,13 @@ describe('Complex e2e test', () => {
       cy.get(`[data-cy="addressCode"]`).type('provided');
       cy.get(`[data-cy="addressCode"]`).should('have.value', 'provided');
 
-      cy.get(`[data-cy="createdAt"]`).type('2024-12-11T16:05');
+      cy.get(`[data-cy="createdAt"]`).type('2024-12-22T22:27');
       cy.get(`[data-cy="createdAt"]`).blur();
-      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-11T16:05');
+      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-22T22:27');
 
-      cy.get(`[data-cy="updatedAt"]`).type('2024-12-11T23:02');
+      cy.get(`[data-cy="updatedAt"]`).type('2024-12-23T05:23');
       cy.get(`[data-cy="updatedAt"]`).blur();
-      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-11T23:02');
+      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-23T05:23');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

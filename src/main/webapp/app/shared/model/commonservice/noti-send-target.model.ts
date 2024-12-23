@@ -4,7 +4,6 @@ import { SendStatusType } from 'app/shared/model/enumerations/send-status-type.m
 
 export interface INotiSendTarget {
   id?: number;
-  notiId?: number;
   targetUserNo?: number;
   targetAddress?: string;
   sendMsg?: string;

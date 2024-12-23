@@ -50,9 +50,6 @@ export const NotiSendTargetUpdate = () => {
     if (values.id !== undefined && typeof values.id !== 'number') {
       values.id = Number(values.id);
     }
-    if (values.notiId !== undefined && typeof values.notiId !== 'number') {
-      values.notiId = Number(values.notiId);
-    }
     if (values.targetUserNo !== undefined && typeof values.targetUserNo !== 'number') {
       values.targetUserNo = Number(values.targetUserNo);
     }
@@ -110,17 +107,6 @@ export const NotiSendTargetUpdate = () => {
                   validate={{ required: true }}
                 />
               ) : null}
-              <ValidatedField
-                label={translate('gatewayApp.commonserviceNotiSendTarget.notiId')}
-                id="noti-send-target-notiId"
-                name="notiId"
-                data-cy="notiId"
-                type="text"
-                validate={{
-                  required: { value: true, message: translate('entity.validation.required') },
-                  validate: v => isNumber(v) || translate('entity.validation.number'),
-                }}
-              />
               <ValidatedField
                 label={translate('gatewayApp.commonserviceNotiSendTarget.targetUserNo')}
                 id="noti-send-target-targetUserNo"

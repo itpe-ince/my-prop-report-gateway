@@ -15,7 +15,6 @@
         "title": "Noti Send Job"
       },
       "id": "Id",
-      "notiId": "Noti Id",
       "jobName": "Job Name",
       "jobTime": "Job Time",
       "jobType": "Job Type",

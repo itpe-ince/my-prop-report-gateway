@@ -19,6 +19,7 @@ logging:
     tech.jhipster: DEBUG
     org.hibernate.SQL: DEBUG
     com.dnc.mprs.gateway: DEBUG
+    javax.management: WARN
 
 management:
   health:

@@ -45,12 +45,6 @@ export const NotiSendDetail = () => {
           </dt>
           <dd>{notiSendEntity.notiType}</dd>
           <dt>
-            <span id="notiTemplateId">
-              <Translate contentKey="gatewayApp.commonserviceNotiSend.notiTemplateId">Noti Template Id</Translate>
-            </span>
-          </dt>
-          <dd>{notiSendEntity.notiTemplateId}</dd>
-          <dt>
             <span id="notiMsg">
               <Translate contentKey="gatewayApp.commonserviceNotiSend.notiMsg">Noti Msg</Translate>
             </span>

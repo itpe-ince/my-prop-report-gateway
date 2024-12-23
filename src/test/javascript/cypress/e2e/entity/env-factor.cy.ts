@@ -15,7 +15,7 @@ describe('EnvFactor e2e test', () => {
   const envFactorPageUrlPattern = new RegExp('/env-factor(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const envFactorSample = { reportId: 1630, envFactorName: 'failing via 맹목적으로' };
+  const envFactorSample = { envFactorName: '대행사' };
 
   let envFactor;
 
@@ -162,17 +162,14 @@ describe('EnvFactor e2e test', () => {
     });
 
     it('should create an instance of EnvFactor', () => {
-      cy.get(`[data-cy="reportId"]`).type('32083');
-      cy.get(`[data-cy="reportId"]`).should('have.value', '32083');
+      cy.get(`[data-cy="envFactorName"]`).type('ha 충실한 destock');
+      cy.get(`[data-cy="envFactorName"]`).should('have.value', 'ha 충실한 destock');
 
-      cy.get(`[data-cy="envFactorName"]`).type('despite');
-      cy.get(`[data-cy="envFactorName"]`).should('have.value', 'despite');
+      cy.get(`[data-cy="envFactorDistance"]`).type('4463.25');
+      cy.get(`[data-cy="envFactorDistance"]`).should('have.value', '4463.25');
 
-      cy.get(`[data-cy="envFactorDistance"]`).type('23494.74');
-      cy.get(`[data-cy="envFactorDistance"]`).should('have.value', '23494.74');
-
-      cy.get(`[data-cy="remarks"]`).type('탄력 있는');
-      cy.get(`[data-cy="remarks"]`).should('have.value', '탄력 있는');
+      cy.get(`[data-cy="remarks"]`).type('합금 철저한');
+      cy.get(`[data-cy="remarks"]`).should('have.value', '합금 철저한');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

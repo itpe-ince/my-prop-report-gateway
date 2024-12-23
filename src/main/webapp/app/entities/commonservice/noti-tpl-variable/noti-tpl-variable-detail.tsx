@@ -33,12 +33,6 @@ export const NotiTplVariableDetail = () => {
           </dt>
           <dd>{notiTplVariableEntity.id}</dd>
           <dt>
-            <span id="notiTemplateId">
-              <Translate contentKey="gatewayApp.commonserviceNotiTplVariable.notiTemplateId">Noti Template Id</Translate>
-            </span>
-          </dt>
-          <dd>{notiTplVariableEntity.notiTemplateId}</dd>
-          <dt>
             <span id="variableName">
               <Translate contentKey="gatewayApp.commonserviceNotiTplVariable.variableName">Variable Name</Translate>
             </span>

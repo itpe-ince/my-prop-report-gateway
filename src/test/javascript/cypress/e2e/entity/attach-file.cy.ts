@@ -192,9 +192,9 @@ describe('AttachFile e2e test', () => {
       cy.get(`[data-cy="relAttachSeq"]`).type('841');
       cy.get(`[data-cy="relAttachSeq"]`).should('have.value', '841');
 
-      cy.get(`[data-cy="createdAt"]`).type('2024-12-11T16:11');
+      cy.get(`[data-cy="createdAt"]`).type('2024-12-22T22:32');
       cy.get(`[data-cy="createdAt"]`).blur();
-      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-11T16:11');
+      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-22T22:32');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

@@ -50,9 +50,6 @@ export const NotiSendUpdate = () => {
     if (values.id !== undefined && typeof values.id !== 'number') {
       values.id = Number(values.id);
     }
-    if (values.notiTemplateId !== undefined && typeof values.notiTemplateId !== 'number') {
-      values.notiTemplateId = Number(values.notiTemplateId);
-    }
     values.createdAt = convertDateTimeToServer(values.createdAt);
     values.updatedAt = convertDateTimeToServer(values.updatedAt);
 
@@ -132,13 +129,6 @@ export const NotiSendUpdate = () => {
                   </option>
                 ))}
               </ValidatedField>
-              <ValidatedField
-                label={translate('gatewayApp.commonserviceNotiSend.notiTemplateId')}
-                id="noti-send-notiTemplateId"
-                name="notiTemplateId"
-                data-cy="notiTemplateId"
-                type="text"
-              />
               <ValidatedField
                 label={translate('gatewayApp.commonserviceNotiSend.notiMsg')}
                 id="noti-send-notiMsg"

@@ -22,7 +22,7 @@ describe('UserInfo e2e test', () => {
     alias: 'wherever though',
     gender: 'OTHER',
     email: 'vD@6-Z4.H9}?',
-    createdAt: '2024-12-12T03:08:18.414Z',
+    createdAt: '2024-12-23T09:29:40.414Z',
   };
 
   let userInfo;
@@ -202,13 +202,13 @@ describe('UserInfo e2e test', () => {
       cy.get(`[data-cy="country"]`).type('Latvia');
       cy.get(`[data-cy="country"]`).should('have.value', 'Latvia');
 
-      cy.get(`[data-cy="createdAt"]`).type('2024-12-11T23:47');
+      cy.get(`[data-cy="createdAt"]`).type('2024-12-23T06:09');
       cy.get(`[data-cy="createdAt"]`).blur();
-      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-11T23:47');
+      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-23T06:09');
 
-      cy.get(`[data-cy="updatedAt"]`).type('2024-12-11T16:36');
+      cy.get(`[data-cy="updatedAt"]`).type('2024-12-22T22:58');
       cy.get(`[data-cy="updatedAt"]`).blur();
-      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-11T16:36');
+      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-22T22:58');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

@@ -15,7 +15,7 @@ describe('Bedroom e2e test', () => {
   const bedroomPageUrlPattern = new RegExp('/bedroom(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const bedroomSample = { reportId: 23507, bedroomName: '아름답게', conditionLevel: 'LOW' };
+  const bedroomSample = { bedroomName: 'unto', conditionLevel: 'LOW' };
 
   let bedroom;
 
@@ -162,31 +162,28 @@ describe('Bedroom e2e test', () => {
     });
 
     it('should create an instance of Bedroom', () => {
-      cy.get(`[data-cy="reportId"]`).type('20123');
-      cy.get(`[data-cy="reportId"]`).should('have.value', '20123');
+      cy.get(`[data-cy="bedroomName"]`).type('or 붐비는');
+      cy.get(`[data-cy="bedroomName"]`).should('have.value', 'or 붐비는');
 
-      cy.get(`[data-cy="bedroomName"]`).type('gadzooks hm wisecrack');
-      cy.get(`[data-cy="bedroomName"]`).should('have.value', 'gadzooks hm wisecrack');
+      cy.get(`[data-cy="conditionLevel"]`).select('MIDDLE');
 
-      cy.get(`[data-cy="conditionLevel"]`).select('HIGH');
+      cy.get(`[data-cy="roomSize"]`).type('17856.51');
+      cy.get(`[data-cy="roomSize"]`).should('have.value', '17856.51');
 
-      cy.get(`[data-cy="roomSize"]`).type('20397.36');
-      cy.get(`[data-cy="roomSize"]`).should('have.value', '20397.36');
+      cy.get(`[data-cy="closetYn"]`).type('g');
+      cy.get(`[data-cy="closetYn"]`).should('have.value', 'g');
 
-      cy.get(`[data-cy="closetYn"]`).type('전');
-      cy.get(`[data-cy="closetYn"]`).should('have.value', '전');
+      cy.get(`[data-cy="acYn"]`).type('전');
+      cy.get(`[data-cy="acYn"]`).should('have.value', '전');
 
-      cy.get(`[data-cy="acYn"]`).type('o');
-      cy.get(`[data-cy="acYn"]`).should('have.value', 'o');
+      cy.get(`[data-cy="windowLocation"]`).type('of');
+      cy.get(`[data-cy="windowLocation"]`).should('have.value', 'of');
 
-      cy.get(`[data-cy="windowLocation"]`).type('boohoo out');
-      cy.get(`[data-cy="windowLocation"]`).should('have.value', 'boohoo out');
+      cy.get(`[data-cy="windowSize"]`).type('boohoo out');
+      cy.get(`[data-cy="windowSize"]`).should('have.value', 'boohoo out');
 
-      cy.get(`[data-cy="windowSize"]`).type('쿨하게');
-      cy.get(`[data-cy="windowSize"]`).should('have.value', '쿨하게');
-
-      cy.get(`[data-cy="remarks"]`).type('unto');
-      cy.get(`[data-cy="remarks"]`).should('have.value', 'unto');
+      cy.get(`[data-cy="remarks"]`).type('쿨하게');
+      cy.get(`[data-cy="remarks"]`).should('have.value', '쿨하게');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

@@ -114,10 +114,6 @@ export const NotiSendTarget = () => {
                   <Translate contentKey="gatewayApp.commonserviceNotiSendTarget.id">Id</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('id')} />
                 </th>
-                <th className="hand" onClick={sort('notiId')}>
-                  <Translate contentKey="gatewayApp.commonserviceNotiSendTarget.notiId">Noti Id</Translate>{' '}
-                  <FontAwesomeIcon icon={getSortIconByFieldName('notiId')} />
-                </th>
                 <th className="hand" onClick={sort('targetUserNo')}>
                   <Translate contentKey="gatewayApp.commonserviceNotiSendTarget.targetUserNo">Target User No</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('targetUserNo')} />
@@ -153,7 +149,6 @@ export const NotiSendTarget = () => {
                       {notiSendTarget.id}
                     </Button>
                   </td>
-                  <td>{notiSendTarget.notiId}</td>
                   <td>{notiSendTarget.targetUserNo}</td>
                   <td>{notiSendTarget.targetAddress}</td>
                   <td>{notiSendTarget.sendMsg}</td>

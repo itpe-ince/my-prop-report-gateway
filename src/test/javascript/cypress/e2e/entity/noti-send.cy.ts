@@ -15,7 +15,7 @@ describe('NotiSend e2e test', () => {
   const notiSendPageUrlPattern = new RegExp('/noti-send(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const notiSendSample = { notiName: 'whereas', notiType: 'SMS' };
+  const notiSendSample = { notiName: '공항 보적', notiType: 'EMAIL' };
 
   let notiSend;
 
@@ -167,19 +167,16 @@ describe('NotiSend e2e test', () => {
 
       cy.get(`[data-cy="notiType"]`).select('EMAIL');
 
-      cy.get(`[data-cy="notiTemplateId"]`).type('26388');
-      cy.get(`[data-cy="notiTemplateId"]`).should('have.value', '26388');
+      cy.get(`[data-cy="notiMsg"]`).type('meh a times');
+      cy.get(`[data-cy="notiMsg"]`).should('have.value', 'meh a times');
 
-      cy.get(`[data-cy="notiMsg"]`).type('노하여');
-      cy.get(`[data-cy="notiMsg"]`).should('have.value', '노하여');
-
-      cy.get(`[data-cy="createdAt"]`).type('2024-12-11T10:47');
+      cy.get(`[data-cy="createdAt"]`).type('2024-12-22T23:24');
       cy.get(`[data-cy="createdAt"]`).blur();
-      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-11T10:47');
+      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-22T23:24');
 
-      cy.get(`[data-cy="updatedAt"]`).type('2024-12-11T17:36');
+      cy.get(`[data-cy="updatedAt"]`).type('2024-12-22T12:23');
       cy.get(`[data-cy="updatedAt"]`).blur();
-      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-11T17:36');
+      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-22T12:23');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

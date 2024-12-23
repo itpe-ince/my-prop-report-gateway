@@ -114,10 +114,6 @@ export const NotiTplVariable = () => {
                   <Translate contentKey="gatewayApp.commonserviceNotiTplVariable.id">Id</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('id')} />
                 </th>
-                <th className="hand" onClick={sort('notiTemplateId')}>
-                  <Translate contentKey="gatewayApp.commonserviceNotiTplVariable.notiTemplateId">Noti Template Id</Translate>{' '}
-                  <FontAwesomeIcon icon={getSortIconByFieldName('notiTemplateId')} />
-                </th>
                 <th className="hand" onClick={sort('variableName')}>
                   <Translate contentKey="gatewayApp.commonserviceNotiTplVariable.variableName">Variable Name</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('variableName')} />
@@ -153,7 +149,6 @@ export const NotiTplVariable = () => {
                       {notiTplVariable.id}
                     </Button>
                   </td>
-                  <td>{notiTplVariable.notiTemplateId}</td>
                   <td>{notiTplVariable.variableName}</td>
                   <td>{notiTplVariable.defaultValue}</td>
                   <td>{notiTplVariable.desciption}</td>

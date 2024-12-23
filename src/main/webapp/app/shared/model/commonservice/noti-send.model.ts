@@ -6,7 +6,6 @@ export interface INotiSend {
   id?: number;
   notiName?: string;
   notiType?: keyof typeof NotiType;
-  notiTemplateId?: number | null;
   notiMsg?: string | null;
   createdAt?: dayjs.Dayjs | null;
   updatedAt?: dayjs.Dayjs | null;

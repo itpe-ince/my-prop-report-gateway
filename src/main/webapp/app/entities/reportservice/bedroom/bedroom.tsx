@@ -113,10 +113,6 @@ export const Bedroom = () => {
                   <Translate contentKey="gatewayApp.reportserviceBedroom.id">Id</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('id')} />
                 </th>
-                <th className="hand" onClick={sort('reportId')}>
-                  <Translate contentKey="gatewayApp.reportserviceBedroom.reportId">Report Id</Translate>{' '}
-                  <FontAwesomeIcon icon={getSortIconByFieldName('reportId')} />
-                </th>
                 <th className="hand" onClick={sort('bedroomName')}>
                   <Translate contentKey="gatewayApp.reportserviceBedroom.bedroomName">Bedroom Name</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('bedroomName')} />
@@ -163,7 +159,6 @@ export const Bedroom = () => {
                       {bedroom.id}
                     </Button>
                   </td>
-                  <td>{bedroom.reportId}</td>
                   <td>{bedroom.bedroomName}</td>
                   <td>
                     <Translate contentKey={`gatewayApp.QualityStateType.${bedroom.conditionLevel}`} />

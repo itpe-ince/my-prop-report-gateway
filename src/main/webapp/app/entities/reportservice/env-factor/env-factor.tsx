@@ -113,10 +113,6 @@ export const EnvFactor = () => {
                   <Translate contentKey="gatewayApp.reportserviceEnvFactor.id">Id</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('id')} />
                 </th>
-                <th className="hand" onClick={sort('reportId')}>
-                  <Translate contentKey="gatewayApp.reportserviceEnvFactor.reportId">Report Id</Translate>{' '}
-                  <FontAwesomeIcon icon={getSortIconByFieldName('reportId')} />
-                </th>
                 <th className="hand" onClick={sort('envFactorName')}>
                   <Translate contentKey="gatewayApp.reportserviceEnvFactor.envFactorName">Env Factor Name</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('envFactorName')} />
@@ -143,7 +139,6 @@ export const EnvFactor = () => {
                       {envFactor.id}
                     </Button>
                   </td>
-                  <td>{envFactor.reportId}</td>
                   <td>{envFactor.envFactorName}</td>
                   <td>{envFactor.envFactorDistance}</td>
                   <td>{envFactor.remarks}</td>

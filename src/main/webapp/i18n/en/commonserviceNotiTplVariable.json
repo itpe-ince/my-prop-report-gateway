@@ -15,7 +15,6 @@
         "title": "Noti Tpl Variable"
       },
       "id": "Id",
-      "notiTemplateId": "Noti Template Id",
       "variableName": "Variable Name",
       "defaultValue": "Default Value",
       "desciption": "Desciption",

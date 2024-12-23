@@ -56,7 +56,7 @@
     ],
     "jhipsterVersion": "8.7.3",
     "languages": ["ko", "en"],
-    "lastLiquibaseTimestamp": 1733977798000,
+    "lastLiquibaseTimestamp": 1734951080000,
     "messageBroker": "kafka",
     "nativeLanguage": "ko",
     "packageName": "com.dnc.mprs.gateway",

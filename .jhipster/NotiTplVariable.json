@@ -1,6 +1,6 @@
 {
   "annotations": {
-    "changelogDate": "20241212042658"
+    "changelogDate": "20241223104820"
   },
   "applications": ["gateway", "commonservice"],
   "clientRootFolder": "commonservice",
@@ -8,11 +8,6 @@
   "fields": [
     {
       "fieldName": "id",
-      "fieldType": "Long",
-      "fieldValidateRules": ["required"]
-    },
-    {
-      "fieldName": "notiTemplateId",
       "fieldType": "Long",
       "fieldValidateRules": ["required"]
     },

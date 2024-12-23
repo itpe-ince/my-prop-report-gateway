@@ -19,7 +19,7 @@ describe('NotiTemplate e2e test', () => {
     templateTitle: '여파 불안한',
     templateBody: 'draft 승인',
     templateFormat: 'JSON',
-    createdAt: '2024-12-12T00:46:55.468Z',
+    createdAt: '2024-12-23T07:08:17.468Z',
   };
 
   let notiTemplate;
@@ -175,13 +175,13 @@ describe('NotiTemplate e2e test', () => {
 
       cy.get(`[data-cy="templateFormat"]`).select('TEXT');
 
-      cy.get(`[data-cy="createdAt"]`).type('2024-12-11T18:21');
+      cy.get(`[data-cy="createdAt"]`).type('2024-12-23T00:42');
       cy.get(`[data-cy="createdAt"]`).blur();
-      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-11T18:21');
+      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-23T00:42');
 
-      cy.get(`[data-cy="updatedAt"]`).type('2024-12-12T01:48');
+      cy.get(`[data-cy="updatedAt"]`).type('2024-12-23T08:09');
       cy.get(`[data-cy="updatedAt"]`).blur();
-      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-12T01:48');
+      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-23T08:09');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

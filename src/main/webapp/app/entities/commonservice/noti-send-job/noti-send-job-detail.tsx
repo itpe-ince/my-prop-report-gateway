@@ -33,12 +33,6 @@ export const NotiSendJobDetail = () => {
           </dt>
           <dd>{notiSendJobEntity.id}</dd>
           <dt>
-            <span id="notiId">
-              <Translate contentKey="gatewayApp.commonserviceNotiSendJob.notiId">Noti Id</Translate>
-            </span>
-          </dt>
-          <dd>{notiSendJobEntity.notiId}</dd>
-          <dt>
             <span id="jobName">
               <Translate contentKey="gatewayApp.commonserviceNotiSendJob.jobName">Job Name</Translate>
             </span>

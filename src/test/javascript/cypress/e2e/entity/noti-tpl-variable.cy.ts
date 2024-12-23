@@ -16,11 +16,10 @@ describe('NotiTplVariable e2e test', () => {
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
   const notiTplVariableSample = {
-    notiTemplateId: 26911,
-    variableName: 'before',
-    defaultValue: 9081,
-    desciption: 'eek',
-    createdAt: '2024-12-11T10:12:38.532Z',
+    variableName: 'geez',
+    defaultValue: 1799,
+    desciption: 'blah likewise',
+    createdAt: '2024-12-23T05:04:31.945Z',
   };
 
   let notiTplVariable;
@@ -168,25 +167,22 @@ describe('NotiTplVariable e2e test', () => {
     });
 
     it('should create an instance of NotiTplVariable', () => {
-      cy.get(`[data-cy="notiTemplateId"]`).type('15826');
-      cy.get(`[data-cy="notiTemplateId"]`).should('have.value', '15826');
+      cy.get(`[data-cy="variableName"]`).type('동맹 옹호');
+      cy.get(`[data-cy="variableName"]`).should('have.value', '동맹 옹호');
 
-      cy.get(`[data-cy="variableName"]`).type('즐겁게');
-      cy.get(`[data-cy="variableName"]`).should('have.value', '즐겁게');
+      cy.get(`[data-cy="defaultValue"]`).type('293');
+      cy.get(`[data-cy="defaultValue"]`).should('have.value', '293');
 
-      cy.get(`[data-cy="defaultValue"]`).type('20536');
-      cy.get(`[data-cy="defaultValue"]`).should('have.value', '20536');
+      cy.get(`[data-cy="desciption"]`).type('애프터셰이브 indeed beyond');
+      cy.get(`[data-cy="desciption"]`).should('have.value', '애프터셰이브 indeed beyond');
 
-      cy.get(`[data-cy="desciption"]`).type('psst 냉담한');
-      cy.get(`[data-cy="desciption"]`).should('have.value', 'psst 냉담한');
-
-      cy.get(`[data-cy="createdAt"]`).type('2024-12-11T09:17');
+      cy.get(`[data-cy="createdAt"]`).type('2024-12-22T12:59');
       cy.get(`[data-cy="createdAt"]`).blur();
-      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-11T09:17');
+      cy.get(`[data-cy="createdAt"]`).should('have.value', '2024-12-22T12:59');
 
-      cy.get(`[data-cy="updatedAt"]`).type('2024-12-11T08:46');
+      cy.get(`[data-cy="updatedAt"]`).type('2024-12-22T16:56');
       cy.get(`[data-cy="updatedAt"]`).blur();
-      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-11T08:46');
+      cy.get(`[data-cy="updatedAt"]`).should('have.value', '2024-12-22T16:56');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

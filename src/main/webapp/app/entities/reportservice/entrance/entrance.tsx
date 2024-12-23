@@ -113,10 +113,6 @@ export const Entrance = () => {
                   <Translate contentKey="gatewayApp.reportserviceEntrance.id">Id</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('id')} />
                 </th>
-                <th className="hand" onClick={sort('reportId')}>
-                  <Translate contentKey="gatewayApp.reportserviceEntrance.reportId">Report Id</Translate>{' '}
-                  <FontAwesomeIcon icon={getSortIconByFieldName('reportId')} />
-                </th>
                 <th className="hand" onClick={sort('entranceName')}>
                   <Translate contentKey="gatewayApp.reportserviceEntrance.entranceName">Entrance Name</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('entranceName')} />
@@ -155,7 +151,6 @@ export const Entrance = () => {
                       {entrance.id}
                     </Button>
                   </td>
-                  <td>{entrance.reportId}</td>
                   <td>{entrance.entranceName}</td>
                   <td>
                     <Translate contentKey={`gatewayApp.QualityStateType.${entrance.condtionLevel}`} />
